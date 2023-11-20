@@ -304,8 +304,8 @@ def rpc_click_on(selector):
             sx = cy/float(h)
             sy = h-cx/float(w)
 
-        sx = cx / float(Window.width)
-        sy = cy / float(Window.height)
+        #sx = cx / float(Window.width)
+        #sy = cy / float(Window.height)
         me = TeleniumMotionEvent("telenium",
                                  id=next(nextid),
                                  args=[sx, sy])
