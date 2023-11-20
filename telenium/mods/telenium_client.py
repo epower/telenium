@@ -287,6 +287,7 @@ def rpc_pick(all=False):
 @kivythread
 def rpc_click_on(selector):
     w = selectFirst(selector)
+    print(f'Window vars: {vars(w)}')
     if w:
         from kivy.core.window import Window
         cx, cy = w.to_window(w.center_x, w.center_y)
