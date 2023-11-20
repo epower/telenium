@@ -291,15 +291,18 @@ def rpc_click_on(selector):
         from kivy.core.window import Window
         rotation = Window.rotation
         cx, cy = w.to_window(w.center_x, w.center_y)
-        
-        #if rotation == 0:
-        #    cx = cx
-        #elif rotation == 90:
-        #    cy = cy
-        #elif rotation == 180:
-        #    cx = 1. - cx
-        #elif rotation == 270:
-        #    cy = 1. - value
+        w = Window.width
+        h = Window.height
+        if rotation == 0:
+            sx = cx / float(Window.width)
+            sy = cy / float(Window.height)
+        elif rotation == 90:
+            cy = cy
+        elif rotation == 180:
+            cx = 1. - cx
+        elif rotation == 270:
+            sx = cy/float(h)
+            sy = h-cx/float(w)
 
         sx = cx / float(Window.width)
         sy = cy / float(Window.height)
