@@ -293,6 +293,8 @@ def rpc_click_on(selector):
         cx, cy = w.to_window(w.center_x, w.center_y)
         w = Window.width
         h = Window.height
+        print(f'w: {w} h: {h}')
+        print(f'cx: {cx} cy: {cy}')
         if rotation == 0:
             sx = cx / float(Window.width)
             sy = cy / float(Window.height)
@@ -304,6 +306,7 @@ def rpc_click_on(selector):
             sx = cy/float(h)
             sy = h-cx/float(w)
 
+        print(f'sx: {sx} sy: {sy}')
         #sx = cx / float(Window.width)
         #sy = cy / float(Window.height)
         me = TeleniumMotionEvent("telenium",
