@@ -304,7 +304,7 @@ def rpc_click_on(selector):
             cx = 1. - cx
         elif rotation == 270:
             sx = cy/float(h)
-            sy = 1. - (h-cx/float(w))
+            sy = 1. - (cx/float(w))
 
         print(f'sx: {sx} sy: {sy}')
         #sx = cx / float(Window.width)
